@@ -1,0 +1,57 @@
+/* COMMON */
+.summary__title {
+    font-size: 34px !important; /* small device일때만 34px로 고정하겠다는 뜻 */
+  }
+  .summary__description {
+    font-size: 22px;
+  }
+    
+  /* FEATURE */
+  /* Float을 사용한 방법 */
+  .section--feature .tiles li {
+    max-width: 100%; /* 하나의 컬럼만 보이도록 */
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  /* Grid를 사용한 방법 */
+  /*
+    .section--feature .tiles ul {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .section--feature .tiles li {
+      border-right: none;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  */
+  
+    /* WHERE IS GITHUB */
+  #map {
+    width: auto; /* 가로 길이 초기화 (%는 부모요소에 영향을 받기 때문에 결과가 이상함) */
+    margin: 40px -20px 0 -20px; /* 좌우로 딱 맞게 늘어날 수 있게 */
+    border-left: none;
+    border-right: none;
+  }
+ 
+  
+  /* PRICING CARD */
+  .section--pricing .card {
+    display: block; /* 수직 정렬 */
+  }
+  .section--pricing .card .cell2 {
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  
+  /* FOOTER */
+  footer .site-links {
+    float: none; /* 좌우로 나눈 거 해제 (float--right, float--left보다 우선순위) */
+    display: block;
+    text-align: center; /* display:flex이면 text-align은 제대로 작동하지 않음 */
+  }
+  footer .site-links:first-child {
+    margin-bottom: 20px;
+  }
+  footer .site-links li {
+    display: inline; /* 가운데정렬 된 것을 inline으로 글자를 위한 배열 */
+  }

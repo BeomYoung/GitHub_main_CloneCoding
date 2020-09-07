@@ -1,0 +1,161 @@
+/* 컨텐츠 사이즈 조절은 padding으로 하는 것이 일반적!!! */
+/* MEDIA */
+
+header.section .inner {
+    /* 우선순위가 밀리기 때문에 일치선택자 추가*/
+    max-width: none;
+    /* 기존 inner에 있던 값을 기본값으로 바꿈으로써 없애준다. */
+    height: auto;
+    /* 기본값으로 초기화 */
+    padding: 0 20px;
+}
+
+header .menu-group,
+header .sign-group {
+    float: none;
+    /* 창이 줄어들면 세로로 배치되기 때문에 float값을 기본값으로 없애준다. */
+}
+
+header .menu-group {
+    display: block;
+    /* 메뉴를 로고 아래로 */
+}
+
+header .logo {
+    padding: 12px 0;
+}
+
+header .main-menu {
+    display: block;
+    /* 메뉴를 수직으로 배열*/
+    margin-bottom: 10px;
+}
+
+header .main-menu li {
+    border-top: 1px solid #e5e5e5;
+}
+
+header .main-menu li a {
+    padding: 16px 0;
+}
+
+header .sign-group {
+    display: block;
+    /* order 속성은 display가 flex일때만 적용 */
+    padding: 10px 0 20px;
+}
+
+header .btn-group {
+    display: block;
+}
+
+header .btn-group .btn {
+    justify-content: center;
+}
+
+header .btn-group .sign-in {
+    margin-bottom: 12px;
+    margin-right: 0;
+}
+
+#search-form {
+    margin-top: 12px;
+    margin-right: 0;
+}
+
+#search {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+}
+
+header .sub-menu {
+    margin-top: 12px;
+    margin-right: 0;
+    justify-content: center;
+    /* display:flex에서 가운데 수평 정렬하는 법 */
+}
+
+header .toggle {
+    /* 창이 줄어들면 메뉴 요소들이 사라짐 */
+    display: none;
+    /* 화면에 보여지는 특성이 없으면 사라진다. -> toggle 클래스가 있으면 display가 사라진다. */
+}
+
+header .toggle.on {
+    /* toggle버튼을 눌렀을 때 on클래스가 붙어있으면 아래 메뉴가 보이도록 (by. JS)*/
+    display: block;
+}
+
+#toggle-btn {
+    display: block;
+    /* 평상시에 보이지 않다가 화면 사이즈가 작아지면 보이게 하기 위함. */
+    /* 기본적인 속성 설정은 미디어쿼리에서 해주지 않는다. -> 속성 변경 최소화 */
+}
+
+/* VISUAL */
+.section--visual {
+    background: url("../img/bg-small.jpg");
+}
+
+.section--visual .inner {
+    display: block;
+    max-width: none;
+    /* 양쪽으로 붙게될 것 */
+}
+
+.section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+
+#sign-form {
+    width: auto;
+    /* 초기화 */
+    max-width: 500px;
+    /* 500px보다 커질 수 없음 */
+    margin: 0 auto;
+}
+
+/* FEATURE */
+.section--feature .summary {
+    padding: 66px 20px 0 20px;
+}
+
+.section--feature .tiles li {
+    width: 50%;
+}
+
+.section--feature .tiles li:nth-child(2) {
+    border-right: none;
+}
+
+.section--feature .tiles li img {
+    padding: 14px 30% 24px;
+}
+
+/* WHERE IS */
+.section--where-is .inner {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+}
+
+/* PRICING CARD */
+.section--pricing .inner {
+    max-width: none;
+    padding: 80px 20px;
+}
+
+.section--pricing .card .cell2 {
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer .inner {
+    padding: 50px 20px;
+}
+
+footer .logo {
+    display: none;
+}
